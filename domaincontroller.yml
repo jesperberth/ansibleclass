@@ -1,5 +1,5 @@
 ---
-- hosts: tag_type_dc
+- hosts: windowsservers
 
   vars:
     ansible_user: jesbe
@@ -17,7 +17,7 @@
 
   vars_prompt:
     - name: password
-      prompt: What is your password?
+      prompt: Password for safemode?
 
   tasks:
     - name: Configure AD
