@@ -8,7 +8,7 @@
   tasks:
     - name: Configure AD
       include_role:
-        name: active_directory_domain
+        name: jesperberth.active_directory_domain
       vars:
         domain: "testdomain.local"
         safemodepw: "{{ password }}"
