@@ -1,0 +1,9 @@
+---
+- hosts: tag_type_dc
+  tasks:
+    - name: Configure AD
+      include_role:
+        name: active-directory-domain
+      vars:
+        domain: "testdomain.local"
+        safemodepw: "SomePassword"
