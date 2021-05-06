@@ -1,9 +1,14 @@
 ---
 - hosts: tag_type_dc
+
+  vars_prompt:
+    - name: password
+      prompt: What is your password?
+
   tasks:
     - name: Configure AD
       include_role:
         name: active-directory-domain
       vars:
         domain: "testdomain.local"
-        safemodepw: "SomePassword"
+          safemodepw: "{{ password }}"
